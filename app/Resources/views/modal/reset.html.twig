@@ -1,0 +1,23 @@
+{% extends 'modal.html.twig' %}
+
+{% block modal_size %}{% endblock %}
+
+{% block icon %}pe-7s-door-lock{% endblock %}
+
+{% block header_title %}Reset Password{% endblock %}
+
+{% block header_subtitle %}Please enter your e-mail.{% endblock %}
+
+{% block body %}
+    <form action="" id="loginForm" novalidate>
+        <div class="form-group">
+            <label class="control-label" for="email">E-mail</label>
+            <input type="text" placeholder="example@gmail.com" title="Please enter your e-mail" required="" value="" name="email" id="email" class="form-control">
+            <span class="help-block small">Your unique e-mail</span>
+        </div>
+        <div>
+            <a class="btn btn-accent" href="#">Reset</a>
+            <a class="btn btn-default" href="{{ path('modal_login') }}">Login</a>
+        </div>
+    </form>
+{% endblock %}
